@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/mIncludeTitle"
+        layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mIncludeTitle"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTvAddUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_menu_color"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="添加用户" />
+
+        <TextView
+            android:id="@+id/mTvRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_menu_color"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="手动刷新列表(后期做缓存的)" />
+
+        <ListView
+            android:id="@+id/mLvContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"></ListView>
+    </LinearLayout>
+
+    <com.vurtnewk.emsgdemo.ui.LoadingView
+        android:id="@+id/mLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.vurtnewk.emsgdemo.ui.LoadingView>
+</RelativeLayout>

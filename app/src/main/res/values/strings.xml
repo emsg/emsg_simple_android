@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EMSGDemo</string>
+    <string name="inputPasswordPlz">请输入密码</string>
+    <string name="inputAccountPlz">请输入用户名</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+
+    <string name="personalInfo">个人信息</string>
+</resources>

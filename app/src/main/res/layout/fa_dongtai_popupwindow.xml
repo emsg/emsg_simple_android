@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:background="@drawable/bg_white_radian"
+        android:orientation="vertical"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/btn_paizhao"
+            style="@style/popwinTextViewStyle"
+            android:text="拍照" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#DDDDDD" />
+
+        <Button
+            android:id="@+id/btn_xuanze"
+            style="@style/popwinTextViewStyle"
+            android:text="从手机相册选择" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_quxiao"
+        style="@style/popwinTextViewStyle"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/bg_white_radian"
+        android:text="取消" />
+</LinearLayout>

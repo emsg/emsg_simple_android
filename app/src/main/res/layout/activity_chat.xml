@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/mIncludeTitle"
+        layout="@layout/include_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/mRlChatBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/mIvVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:src="@drawable/btn_chat_voice" />
+
+        <ImageView
+            android:id="@+id/mIvOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dip"
+            android:src="@drawable/btn_chat_other" />
+
+        <EditText
+            android:id="@+id/mEtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/mIvOther"
+            android:layout_toRightOf="@id/mIvVoice" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/mLvChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mRlChatBar"
+        android:layout_below="@id/mIncludeTitle" />
+
+
+</RelativeLayout>
