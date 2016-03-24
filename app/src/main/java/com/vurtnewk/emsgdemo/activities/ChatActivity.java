@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * @author VurtneWk
  * @time created on 2016/3/21.16:09
- * 新的聊天界面..待完成的
+ * 新的聊天界面..待完成的1233
  */
 public class ChatActivity extends BaseActivity {
 
