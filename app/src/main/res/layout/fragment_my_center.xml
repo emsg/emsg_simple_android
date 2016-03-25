@@ -1,57 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/include_toolbar" />
+    <include
+        android:id="@+id/mIncludeTitle"
+        layout="@layout/include_toolbar" />
 
-    <RelativeLayout
-        android:id="@+id/mRlToUserInfo"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_menu_color"
-        android:padding="10dip">
+        android:layout_below="@id/mIncludeTitle"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/mIvAvatar"
-            android:layout_width="40dip"
-            android:layout_height="40dip"
-            android:src="@mipmap/ic_launcher" />
+        <RelativeLayout
+            android:id="@+id/mRlToUserInfo"
 
-        <TextView
-            android:id="@+id/mTvNickName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/mIvAvatar"
-            android:padding="10dip"
-            android:text="名字" />
+            android:background="@drawable/bg_menu_color"
+            android:padding="10dip">
 
-        <ImageView
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/mTvNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/mIvAvatar"
+                android:padding="10dip"
+                android:text="名字" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_right_arrow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRlLogout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_right_arrow" />
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bg_menu_color"
+            android:padding="10dip">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="退出登录" />
 
-    <RelativeLayout
-        android:id="@+id/mRlLogout"
-        android:layout_marginTop="10dip"
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.vurtnewk.emsgdemo.ui.LoadingView
+        android:id="@+id/mLoadingView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_menu_color"
-        android:padding="10dip">
+        android:layout_height="match_parent"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-            android:padding="10dip"
-            android:text="退出登录" />
-
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

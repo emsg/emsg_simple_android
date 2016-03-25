@@ -6,6 +6,7 @@ import android.os.Environment;
 import java.io.IOException;
 
 public class SoundMeter {
+
     static final private double EMA_FILTER = 0.6;
 
     private MediaRecorder mRecorder = null;

@@ -50,8 +50,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:background="#55000000" />
+                android:layout_height="0.1dip"
+                android:background="#66333333" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,20 +73,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dip" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="15dip"
-                    android:src="@drawable/ic_right_arrow" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:background="#55000000" />
+                android:layout_height="0.1dip"
+                android:background="#66333333" />
 
             <LinearLayout
+                android:id="@+id/mLlNickName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_menu_color"
@@ -116,10 +111,11 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:background="#55000000" />
+                android:layout_height="0.1dip"
+                android:background="#66333333" />
 
             <LinearLayout
+                android:id="@+id/mLlGender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_menu_color"
@@ -149,10 +145,11 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:background="#55000000" />
+                android:layout_height="0.1dip"
+                android:background="#66333333" />
 
             <LinearLayout
+                android:id="@+id/mLlBirthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_menu_color"
@@ -182,10 +179,11 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:background="#55000000" />
+                android:layout_height="0.1dip"
+                android:background="#66333333" />
 
             <LinearLayout
+                android:id="@+id/mLlEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_menu_color"
@@ -219,6 +217,6 @@
     <com.vurtnewk.emsgdemo.ui.LoadingView
         android:id="@+id/mLoadingView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

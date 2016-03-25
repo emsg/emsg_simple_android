@@ -10,5 +10,7 @@
     <color name="color_menu_pressed">#EEEEEE</color>
     <color name="color_white">#FFFFFF</color>
     <color name="color_F5">#F5F5F5</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_DDDDDD">#DDDDDD</color>
 
 </resources>

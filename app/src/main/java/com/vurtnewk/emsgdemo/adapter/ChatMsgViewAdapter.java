@@ -345,7 +345,6 @@ public class ChatMsgViewAdapter extends BaseAdapter {
                         } else if (flag == 2) {
                             animationDrawable.stop();
                             imageView.setImageResource(R.drawable.chatto_voice_playing);
-                            ;
                         }
                     }
                 });

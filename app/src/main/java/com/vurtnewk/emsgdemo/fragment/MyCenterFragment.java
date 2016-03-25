@@ -2,7 +2,6 @@ package com.vurtnewk.emsgdemo.fragment;
 
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +20,7 @@ import com.vurtnewk.emsgdemo.constants.SettingsConstants;
 import com.vurtnewk.emsgdemo.constants.UrlConstants;
 import com.vurtnewk.emsgdemo.entity.SimpleData;
 import com.vurtnewk.emsgdemo.entity.UserInfo;
+import com.vurtnewk.emsgdemo.ui.LoadingView;
 import com.vurtnewk.emsgdemo.utils.ACache;
 import com.vurtnewk.emsgdemo.utils.VToast;
 import com.vurtnewk.emsgdemo.utils.http.HttpClient;
@@ -39,6 +39,7 @@ public class MyCenterFragment extends BaseFragment implements View.OnClickListen
     private RelativeLayout mRlLogout;
     ImageView mIvAvatar;
     TextView mTvNickName;
+    LoadingView mLoadingView;
 
     @Override
     protected void initData() {
@@ -54,10 +55,11 @@ public class MyCenterFragment extends BaseFragment implements View.OnClickListen
         mRlLogout = (RelativeLayout) rootView.findViewById(R.id.mRlLogout);
         mToolbar = (Toolbar) rootView.findViewById(R.id.mToolbar);
         mToolbar.setNavigationIcon(null);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+//        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
         mToolbarTitle = (TextView) rootView.findViewById(R.id.mToolbarTitle);
         mIvAvatar = (ImageView) rootView.findViewById(R.id.mIvAvatar);
         mTvNickName = (TextView) rootView.findViewById(R.id.mTvNickName);
+        mLoadingView = (LoadingView) rootView.findViewById(R.id.mLoadingView);
 
         mRlToUserInfo.setOnClickListener(this);
         mRlLogout.setOnClickListener(this);
@@ -96,17 +98,18 @@ public class MyCenterFragment extends BaseFragment implements View.OnClickListen
                 } else {
                     VToast.showShortToast(mContext, "退出登录失败:" + simpleData.getEntity().reason);
                 }
-
+                mLoadingView.hide();
             }
 
             @Override
             public void onFailure(String error) {
+                mLoadingView.hide();
                 VToast.showShortToast(mContext, "退出登录失败:" + error);
             }
 
             @Override
             public void onStart() {
-                VToast.showShortToast(mContext, "退出进行中...");
+                mLoadingView.show();
             }
         });
 

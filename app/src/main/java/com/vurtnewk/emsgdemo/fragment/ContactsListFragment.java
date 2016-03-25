@@ -2,7 +2,6 @@ package com.vurtnewk.emsgdemo.fragment;
 
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,7 +50,7 @@ public class ContactsListFragment extends BaseFragment implements View.OnClickLi
         mToolbarTitle = (TextView) view.findViewById(R.id.mToolbarTitle);
         mTvAddUser = (TextView) view.findViewById(R.id.mTvAddUser);
         mToolbar.setNavigationIcon(null);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+//        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
         mTvRefresh = (TextView) view.findViewById(R.id.mTvRefresh);
         mLoadingView = (LoadingView) view.findViewById(R.id.mLoadingView);
         mToolbarTitle.setText("联系人列表");

@@ -32,7 +32,10 @@ public class VToast {
     }
 
     private static final void showMsg(Context context, String msg, int length) {
-        if(msg == null || "".equals(msg)){
+        if (msg == null || "".equals(msg)) {
+            return;
+        }
+        if (context == null) {
             return;
         }
         mHandler.removeCallbacks(mRunnable);
@@ -47,6 +50,7 @@ public class VToast {
 
     /**
      * 非工作线程时调用
+     *
      * @param context
      * @param msg
      */
@@ -56,6 +60,7 @@ public class VToast {
 
     /**
      * 非工作线程时调用
+     *
      * @param context
      * @param msg
      */

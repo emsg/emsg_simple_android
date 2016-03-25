@@ -15,27 +15,30 @@
             android:id="@+id/mEtUserAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="vurtnewk2"
-            android:hint="@string/inputAccountPlz" />
+            android:hint="@string/inputAccountPlz"
+            android:text="" />
 
         <EditText
             android:id="@+id/mEtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/inputPasswordPlz"
-            android:text="111111"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:text="" />
 
         <Button
             android:id="@+id/mBtnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dip"
             android:text="@string/login" />
 
         <Button
             android:id="@+id/mBtnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
             android:text="@string/register" />
     </LinearLayout>
 

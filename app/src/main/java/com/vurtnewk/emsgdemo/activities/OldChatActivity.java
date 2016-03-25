@@ -1246,7 +1246,6 @@ public class OldChatActivity extends BaseActivity {
                         MessageInfoEntity entity = new MessageInfoEntity();
                         entity.setMsg_content(listmessageinfo.get(i).get("msg_content"));
                         entity.setMsg_time(listmessageinfo.get(i).get("msg_time"));
-
 //                        entity.setMyheadurl(listmessageinfo.get(i).get("myheadurl"));
 //                        entity.setMynickname(listmessageinfo.get(i).get("mynickname"));
                         //todo
@@ -1381,7 +1380,9 @@ public class OldChatActivity extends BaseActivity {
                             o = new JSONObject(result);
                             JSONObject entity = o.optJSONObject("entity");
                             String photoid = entity.optString("id");
-                            uploadFileResult(UrlConstants.BASE_FILE_URL_GET + photoid);
+                            if(!TextUtils.isEmpty(photoid)){
+                                uploadFileResult(UrlConstants.BASE_FILE_URL_GET + photoid);
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

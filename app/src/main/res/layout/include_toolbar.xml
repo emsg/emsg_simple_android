@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
         android:id="@+id/mToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        toolbar:navigationIcon="@drawable/btn_back_white">
+        android:subtitle=""
+        android:title=""
+        toolbar:navigationIcon="@drawable/btn_back_white"
+        toolbar:popupTheme="@style/Theme.ToolBar.Base">
 
         <TextView
             android:id="@+id/mToolbarTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginRight="30dip"
             android:textColor="@color/color_white"
             android:textSize="14sp" />
 

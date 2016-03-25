@@ -40,4 +40,10 @@
     </style>
 
     <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <style name="Theme.ToolBar.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/color_white</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

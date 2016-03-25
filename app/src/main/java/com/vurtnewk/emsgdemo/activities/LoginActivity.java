@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.vurtnewk.emsg.EmsgCallBack;
@@ -40,6 +41,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     Button mBtnRegister;
     Toolbar mToolbar;
     LoadingView mLoadingView;
+    TextView mToolbarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +53,19 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         mLoadingView = (LoadingView) findViewById(R.id.mLoadingView);
         mBtnRegister = (Button) findViewById(R.id.mBtnRegister);
+        mToolbarTitle = (TextView) findViewById(R.id.mToolbarTitle);
 
         //toolbar设置
-        mToolbar.setTitle(R.string.login);
-        setSupportActionBar(mToolbar);
-        mToolbar.setNavigationIcon(null);
+        mToolbarTitle.setText(R.string.login);
+//        setSupportActionBar(mToolbar);
+//        mToolbar.setNavigationIcon(null);
+
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         mBtnLogin.setOnClickListener(this);
         mBtnRegister.setOnClickListener(this);
@@ -156,6 +166,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                                             public void onSuccess() {
                                                 VLog.i("EMSG", "emsg========登录成功");
                                             }
+
                                             @Override
                                             public void onError(TypeError mTypeError) {
                                                 VLog.i("EMSG", "emsg========登录失败");
